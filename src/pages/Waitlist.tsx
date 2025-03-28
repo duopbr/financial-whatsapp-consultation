@@ -3,17 +3,22 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const Waitlist = () => {
-  const navigate = useNavigate();
-  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-1 py-16 px-4 bg-gray-50">
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm text-center">
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm text-center relative">
+          <Link to="/" className="absolute top-4 left-4">
+            <Button variant="outline" className="flex items-center gap-2">
+              <ArrowLeft size={18} />
+              Voltar
+            </Button>
+          </Link>
+          
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-finance-light text-finance-green mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,21 +46,8 @@ const Waitlist = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => navigate('/')}
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <ArrowLeft size={18} />
-              Voltar para o site
-            </Button>
-            
-            <Button
+              onClick={() => navigator.clipboard.writeText(window.location.origin)}
               className="bg-finance-green hover:bg-green-600"
-              onClick={() => {
-                // Share functionality would go here
-                navigator.clipboard.writeText(window.location.origin);
-                alert('Link copiado! Compartilhe com seus amigos.');
-              }}
             >
               Indique para um amigo
             </Button>
