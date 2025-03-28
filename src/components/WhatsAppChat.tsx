@@ -17,7 +17,7 @@ export const WhatsAppChat = () => {
       <div className="whatsapp-body">
         <div className="chat-area">
           <div className="message received">
-            <div>Olá! Sou o Nicolas da FinanceMentor. Como posso ajudar com seus investimentos hoje?</div>
+            <div>Olá! Sou o Nicolas da Duop. Como posso ajudar com seus investimentos hoje?</div>
             <div className="message-time">09:42</div>
           </div>
           
