@@ -43,15 +43,6 @@ const Waitlist = () => {
           <p className="text-lg text-gray-600 mb-8">
             Agradecemos pelo seu interesse! Neste momento todas as vagas estão preenchidas, mas você já está na lista de espera. Assim que abrirmos novas vagas, você será o primeiro a saber.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={() => navigator.clipboard.writeText(window.location.origin)}
-              className="bg-finance-green hover:bg-green-600"
-            >
-              Indique para um amigo
-            </Button>
-          </div>
         </div>
       </div>
       <Footer />
