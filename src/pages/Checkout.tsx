@@ -12,10 +12,10 @@ const Checkout = () => {
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 text-center">
             <h1 className="text-3xl font-bold text-finance-navy">
-              Complete sua compra
+              Complete sua assinatura
             </h1>
             <p className="text-gray-600 mt-2">
-              Você está a um passo de ter sua consultoria financeira no WhatsApp
+              Informe seu WhatsApp e escolha como deseja pagar sua consultoria financeira
             </p>
           </div>
           
