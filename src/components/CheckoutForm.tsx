@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { toast } from "@/hooks/use-toast";
-import { Loader2, CreditCard, QrCode, ArrowLeft } from 'lucide-react';
+import { Loader2, CreditCard, QrCode } from 'lucide-react';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
@@ -40,14 +40,7 @@ export const CheckoutForm = () => {
   });
   
   return (
-    <div className="checkout-container relative">
-      <Link to="/" className="absolute top-0 left-0">
-        <Button variant="outline" className="flex items-center gap-2">
-          <ArrowLeft size={18} />
-          Voltar
-        </Button>
-      </Link>
-
+    <div className="checkout-container">
       <h2 className="text-2xl font-bold mb-6 text-center text-finance-navy">
         Complete sua assinatura
       </h2>
