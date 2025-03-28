@@ -4,9 +4,15 @@ import Navbar from '@/components/Navbar';
 import { Button } from "@/components/ui/button";
 import { Footer } from '@/components/Footer';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, MessageSquare } from 'lucide-react';
 
 const Waitlist = () => {
+  const handleWhatsAppChat = () => {
+    const phoneNumber = "5521973973673";
+    const message = encodeURIComponent("Olá! Gostaria de solicitar um período de teste para o produto Duop.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -40,9 +46,23 @@ const Waitlist = () => {
             As vagas para nossa consultoria esgotaram!
           </h1>
           
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-6">
             Agradecemos pelo seu interesse! Neste momento todas as vagas estão preenchidas, mas você já está na lista de espera. Assim que abrirmos novas vagas, você será o primeiro a saber.
           </p>
+          
+          <p className="text-lg text-gray-600 mb-8">
+            Se você deseja experimentar um período de teste do nosso produto, clique no botão abaixo para conversar diretamente com nossa equipe no WhatsApp.
+          </p>
+          
+          <div className="flex justify-center">
+            <Button 
+              onClick={handleWhatsAppChat}
+              className="bg-green-500 hover:bg-green-600 text-white"
+            >
+              <MessageSquare size={20} />
+              Solicitar período de teste
+            </Button>
+          </div>
         </div>
       </div>
       <Footer />
