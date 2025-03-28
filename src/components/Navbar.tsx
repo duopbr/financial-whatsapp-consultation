@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Logo />
-          <span className="ml-2 font-semibold text-lg text-finance-navy">FinanceMentor</span>
+          <span className="ml-2 font-semibold text-lg text-finance-navy">Duop</span>
         </div>
         
         <Link to="/checkout">
