@@ -1,0 +1,70 @@
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import { Button } from "@/components/ui/button";
+import { Footer } from '@/components/Footer';
+import { useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+
+const Waitlist = () => {
+  const navigate = useNavigate();
+  
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <div className="flex-1 py-16 px-4 bg-gray-50">
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-finance-light text-finance-green mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+          </div>
+          
+          <h1 className="text-3xl font-bold text-finance-navy mb-4">
+            As vagas para nossa consultoria esgotaram!
+          </h1>
+          
+          <p className="text-lg text-gray-600 mb-8">
+            Agradecemos pelo seu interesse! Neste momento todas as vagas estão preenchidas, mas você já está na lista de espera. Assim que abrirmos novas vagas, você será o primeiro a saber.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={() => navigate('/')}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft size={18} />
+              Voltar para o site
+            </Button>
+            
+            <Button
+              className="bg-finance-green hover:bg-green-600"
+              onClick={() => {
+                // Share functionality would go here
+                navigator.clipboard.writeText(window.location.origin);
+                alert('Link copiado! Compartilhe com seus amigos.');
+              }}
+            >
+              Indique para um amigo
+            </Button>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Waitlist;
