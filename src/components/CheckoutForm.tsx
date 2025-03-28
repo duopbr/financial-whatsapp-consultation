@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
-import { toast } from "@/components/ui/sonner";
+import { toast } from "@/hooks/use-toast";
 import { Loader2 } from 'lucide-react';
 
 export const CheckoutForm = () => {
@@ -29,7 +29,11 @@ export const CheckoutForm = () => {
     
     // Simulate form validation
     if (!formData.cardName || !formData.cardNumber || !formData.cardExpiry || !formData.cardCVV || !formData.phone) {
-      toast.error("Por favor, preencha todos os campos");
+      toast({
+        title: "Erro",
+        description: "Por favor, preencha todos os campos",
+        variant: "destructive"
+      });
       return;
     }
     
