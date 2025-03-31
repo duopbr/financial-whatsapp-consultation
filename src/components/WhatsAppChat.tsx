@@ -5,8 +5,12 @@ export const WhatsAppChat = () => {
   return (
     <div className="whatsapp-chat-container">
       <div className="whatsapp-header">
-        <div className="whatsapp-avatar">
-          <span className="text-lg font-bold">FM</span>
+        <div className="whatsapp-avatar bg-[#1DBAED] overflow-hidden">
+          <img 
+            src="/lovable-uploads/124e85e1-85e1-4251-915e-7d3c49f2b0c8.png" 
+            alt="Duop Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
         <div>
           <div className="font-semibold">Duop</div>
