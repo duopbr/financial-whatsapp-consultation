@@ -14,7 +14,6 @@ export const WhatsAppChat = () => {
         </div>
         <div>
           <div className="font-semibold">Duop</div>
-          <div className="text-xs opacity-80">Nicolas, Julia, Paula e +2</div>
         </div>
       </div>
       
