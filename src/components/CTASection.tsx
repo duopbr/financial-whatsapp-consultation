@@ -25,7 +25,6 @@ export const CTASection = () => {
         <Button 
           onClick={handleCTAClick}
           className="bg-finance-green hover:bg-green-600 text-white font-medium px-8 py-3 text-lg rounded-full flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl transition-all"
-          dataBotao="assinar-plano"
           dataPosicao="cta-section"
           dataPagina="home"
         >

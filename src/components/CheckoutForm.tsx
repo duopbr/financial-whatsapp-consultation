@@ -106,7 +106,6 @@ export const CheckoutForm = () => {
             type="submit"
             disabled={isSubmitting}
             className="w-full bg-finance-green hover:bg-green-600 text-white font-medium py-3 text-lg rounded-md mt-4"
-            dataBotao="finalizar-assinatura"
             dataPosicao="formulario"
             dataPagina="checkout"
           >
