@@ -22,9 +22,9 @@ const Waitlist = () => {
             <Button 
               variant="outline" 
               className="flex items-center gap-2"
-              dataServico="navegacao"
-              dataPlano="n/a"
-              dataOrigem="waitlist"
+              dataBotao="voltar"
+              dataPosicao="topo-pagina"
+              dataPagina="waitlist"
             >
               <ArrowLeft size={18} />
               Voltar
@@ -64,9 +64,9 @@ const Waitlist = () => {
             <Button 
               onClick={handleWhatsAppChat}
               className="bg-green-500 hover:bg-green-600 text-white"
-              dataServico="consultoria-financeira"
-              dataPlano="teste"
-              dataOrigem="waitlist"
+              dataBotao="abrir-whatsapp"
+              dataPosicao="conteudo-principal"
+              dataPagina="waitlist"
             >
               <MessageSquare size={20} />
               Solicitar período de teste

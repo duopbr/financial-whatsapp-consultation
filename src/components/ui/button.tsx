@@ -38,21 +38,21 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
-  dataServico?: string
-  dataPlano?: string
-  dataOrigem?: string
+  dataBotao?: string
+  dataPosicao?: string
+  dataPagina?: string
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, dataServico, dataPlano, dataOrigem, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, dataBotao, dataPosicao, dataPagina, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        data-servico={dataServico}
-        data-plano={dataPlano}
-        data-origem={dataOrigem}
+        data-botao={dataBotao}
+        data-posicao={dataPosicao}
+        data-pagina={dataPagina}
         {...props}
       />
     )
