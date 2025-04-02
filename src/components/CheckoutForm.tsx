@@ -43,6 +43,11 @@ export const CheckoutForm = () => {
   const paymentMethod = form.watch('paymentMethod');
   const dataPagamento = paymentMethod === 'pix' ? 'pix' : 'cartao';
   
+  // Function to handle clicking anywhere in the payment method box
+  const handleBoxClick = (value: string) => {
+    form.setValue('paymentMethod', value);
+  };
+  
   return (
     <div className="checkout-container">
       <h2 className="text-2xl font-bold mb-6 text-center text-finance-navy">
@@ -67,25 +72,35 @@ export const CheckoutForm = () => {
                     defaultValue={field.value}
                     className="flex flex-col space-y-3"
                   >
-                    <FormItem className="flex items-center space-x-3 space-y-0 border rounded-md p-4 hover:bg-gray-50 cursor-pointer">
-                      <FormControl>
-                        <RadioGroupItem value="credit" />
-                      </FormControl>
-                      <FormLabel className="flex items-center gap-2 font-normal cursor-pointer">
-                        <CreditCard className="h-5 w-5 text-finance-navy" />
-                        <span>Cartão de Crédito/Débito</span>
-                      </FormLabel>
-                    </FormItem>
+                    <div 
+                      className="flex items-center space-x-3 space-y-0 border rounded-md p-4 hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleBoxClick('credit')}
+                    >
+                      <FormItem className="flex items-center space-x-3 space-y-0 m-0 cursor-pointer">
+                        <FormControl>
+                          <RadioGroupItem value="credit" />
+                        </FormControl>
+                        <FormLabel className="flex items-center gap-2 font-normal cursor-pointer">
+                          <CreditCard className="h-5 w-5 text-finance-navy" />
+                          <span>Cartão de Crédito/Débito</span>
+                        </FormLabel>
+                      </FormItem>
+                    </div>
                     
-                    <FormItem className="flex items-center space-x-3 space-y-0 border rounded-md p-4 hover:bg-gray-50 cursor-pointer">
-                      <FormControl>
-                        <RadioGroupItem value="pix" />
-                      </FormControl>
-                      <FormLabel className="flex items-center gap-2 font-normal cursor-pointer">
-                        <QrCode className="h-5 w-5 text-finance-navy" />
-                        <span>PIX</span>
-                      </FormLabel>
-                    </FormItem>
+                    <div 
+                      className="flex items-center space-x-3 space-y-0 border rounded-md p-4 hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleBoxClick('pix')}
+                    >
+                      <FormItem className="flex items-center space-x-3 space-y-0 m-0 cursor-pointer">
+                        <FormControl>
+                          <RadioGroupItem value="pix" />
+                        </FormControl>
+                        <FormLabel className="flex items-center gap-2 font-normal cursor-pointer">
+                          <QrCode className="h-5 w-5 text-finance-navy" />
+                          <span>PIX</span>
+                        </FormLabel>
+                      </FormItem>
+                    </div>
                   </RadioGroup>
                 </FormControl>
               </FormItem>
