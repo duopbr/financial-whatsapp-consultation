@@ -8,8 +8,10 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
   const isCheckoutPage = location.pathname === '/checkout';
+  const isWaitlistPage = location.pathname === '/waitlist';
+
   const currentPage = isCheckoutPage ? 'checkout' : 
-                     location.pathname === '/waitlist' ? 'waitlist' : 'home';
+                     isWaitlistPage ? 'waitlist' : 'home';
 
   return (
     <nav className="border-b py-3 px-4 sm:px-6 lg:px-8 bg-white sticky top-0 z-10">
@@ -19,7 +21,7 @@ const Navbar = () => {
           <span className="ml-2 font-semibold text-lg text-finance-navy">Duop</span>
         </Link>
         
-        {!isCheckoutPage && (
+        {!isCheckoutPage && !isWaitlistPage && (
           <Link to="/checkout">
             <Button 
               className="flex items-center gap-2 bg-finance-green hover:bg-green-600"
