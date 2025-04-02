@@ -39,6 +39,10 @@ export const CheckoutForm = () => {
     }, 1500);
   });
   
+  // Get the current payment method to use for the data-pagamento attribute
+  const paymentMethod = form.watch('paymentMethod');
+  const dataPagamento = paymentMethod === 'pix' ? 'pix' : 'cartao';
+  
   return (
     <div className="checkout-container">
       <h2 className="text-2xl font-bold mb-6 text-center text-finance-navy">
@@ -109,6 +113,7 @@ export const CheckoutForm = () => {
             dataBotao="assinar agora"
             dataPosicao="formulario"
             dataPagina="checkout"
+            data-pagamento={dataPagamento}
           >
             {isSubmitting ? (
               <>
