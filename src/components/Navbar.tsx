@@ -8,7 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
   const isCheckoutPage = location.pathname === '/checkout';
-  const currentPage = location.pathname === '/' ? 'home' : location.pathname.substring(1);
 
   return (
     <nav className="border-b py-3 px-4 sm:px-6 lg:px-8 bg-white sticky top-0 z-10">
@@ -22,9 +21,9 @@ const Navbar = () => {
           <Link to="/checkout">
             <Button 
               className="flex items-center gap-2 bg-finance-green hover:bg-green-600"
-              dataBotao="queroassinar"
-              dataPosicao="navbar"
-              dataPagina={currentPage}
+              dataServico="consultoria-financeira"
+              dataPlano="mensal"
+              dataOrigem="navbar"
             >
               <MessageSquare size={18} />
               <span className="hidden sm:inline">Quero Assinar</span>

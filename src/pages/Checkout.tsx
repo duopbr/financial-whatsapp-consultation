@@ -16,9 +16,9 @@ const Checkout = () => {
           <Button 
             variant="outline" 
             className="flex items-center gap-2"
-            dataBotao="voltar"
-            dataPosicao="topo-pagina"
-            dataPagina="checkout"
+            dataServico="navegacao"
+            dataPlano="n/a"
+            dataOrigem="checkout"
           >
             <ArrowLeft size={18} />
             Voltar
