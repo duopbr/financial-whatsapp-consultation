@@ -38,21 +38,32 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
-  dataServico?: string
-  dataPlano?: string
-  dataOrigem?: string
+  dataBotao?: string
+  dataPosicao?: string
+  dataPagina?: string
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, dataServico, dataPlano, dataOrigem, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, dataBotao, dataPosicao, dataPagina, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    
+    // Criar automaticamente o dataBotao a partir do texto se não for fornecido
+    const buttonText = typeof children === 'string' 
+      ? children 
+      : React.Children.toArray(children)
+          .filter(child => typeof child === 'string')
+          .join('');
+    
+    const processedDataBotao = dataBotao || 
+      (buttonText ? buttonText.toLowerCase().replace(/\s+/g, '') : undefined);
+    
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        data-servico={dataServico}
-        data-plano={dataPlano}
-        data-origem={dataOrigem}
+        data-botao={processedDataBotao}
+        data-posicao={dataPosicao}
+        data-pagina={dataPagina}
         {...props}
       />
     )
