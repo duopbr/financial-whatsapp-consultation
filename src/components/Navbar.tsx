@@ -22,6 +22,7 @@ const Navbar = () => {
           <Link to="/checkout">
             <Button 
               className="flex items-center gap-2 bg-finance-green hover:bg-green-600"
+              dataBotao="queroassinar"
               dataPosicao="navbar"
               dataPagina={currentPage}
             >

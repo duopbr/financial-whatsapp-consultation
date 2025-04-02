@@ -16,6 +16,7 @@ const Checkout = () => {
           <Button 
             variant="outline" 
             className="flex items-center gap-2"
+            dataBotao="voltar"
             dataPosicao="topo-pagina"
             dataPagina="checkout"
           >

@@ -22,6 +22,7 @@ const Waitlist = () => {
             <Button 
               variant="outline" 
               className="flex items-center gap-2"
+              dataBotao="voltar"
               dataPosicao="topo-pagina"
               dataPagina="waitlist"
             >
@@ -63,6 +64,7 @@ const Waitlist = () => {
             <Button 
               onClick={handleWhatsAppChat}
               className="bg-green-500 hover:bg-green-600 text-white"
+              dataBotao="solicitarperíododeteste"
               dataPosicao="conteudo-principal"
               dataPagina="waitlist"
             >

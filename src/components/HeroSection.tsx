@@ -27,7 +27,7 @@ export const HeroSection = () => {
           <Button 
             onClick={handleCTAClick}
             className="bg-finance-green hover:bg-green-600 text-white font-medium px-6 py-3 text-lg rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
-            dataBotao="assinar-plano"
+            dataBotao="queroassinarpor$14,99"
             dataPosicao="hero-section"
             dataPagina="home"
           >

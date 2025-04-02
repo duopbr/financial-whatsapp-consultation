@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -46,7 +45,26 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, dataBotao, dataPosicao, dataPagina, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    const buttonText = typeof children === 'string' ? children : dataBotao;
+    
+    // Get button text and format it (lowercase and remove spaces)
+    let buttonText: string | undefined;
+    
+    if (dataBotao) {
+      // If dataBotao is provided, use it
+      buttonText = dataBotao;
+    } else if (typeof children === 'string') {
+      // If children is a string, use it (lowercase and remove spaces)
+      buttonText = children.toLowerCase().replace(/\s+/g, '');
+    } else {
+      // Otherwise, try to find text in children recursively
+      const extractText = (child: any): string => {
+        if (typeof child === 'string') return child;
+        if (Array.isArray(child)) return child.map(extractText).join('');
+        if (child?.props?.children) return extractText(child.props.children);
+        return '';
+      }
+      buttonText = extractText(children).toLowerCase().replace(/\s+/g, '');
+    }
     
     return (
       <Comp
