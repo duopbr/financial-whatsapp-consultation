@@ -65,7 +65,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         data-posicao={dataPosicao}
         data-pagina={dataPagina}
         {...props}
-      />
+      >
+        {children}
+      </Comp>
     )
   }
 )
