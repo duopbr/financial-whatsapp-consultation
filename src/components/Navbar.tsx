@@ -15,7 +15,12 @@ const Navbar = () => {
         </div>
         
         <Link to="/checkout">
-          <Button className="flex items-center gap-2 bg-finance-green hover:bg-green-600">
+          <Button 
+            className="flex items-center gap-2 bg-finance-green hover:bg-green-600"
+            dataServico="consultoria-financeira"
+            dataPlano="mensal"
+            dataOrigem="navbar"
+          >
             <MessageSquare size={18} />
             <span className="hidden sm:inline">Quero Assinar</span>
             <span className="inline sm:hidden">Assinar</span>

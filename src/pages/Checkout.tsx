@@ -13,7 +13,13 @@ const Checkout = () => {
       <Navbar />
       <div className="flex-1 py-12 px-4 bg-gray-50 relative">
         <Link to="/" className="absolute top-4 left-4">
-          <Button variant="outline" className="flex items-center gap-2">
+          <Button 
+            variant="outline" 
+            className="flex items-center gap-2"
+            dataServico="navegacao"
+            dataPlano="n/a"
+            dataOrigem="checkout"
+          >
             <ArrowLeft size={18} />
             Voltar
           </Button>

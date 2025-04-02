@@ -25,6 +25,9 @@ export const CTASection = () => {
         <Button 
           onClick={handleCTAClick}
           className="bg-finance-green hover:bg-green-600 text-white font-medium px-8 py-3 text-lg rounded-full flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl transition-all"
+          dataServico="consultoria-financeira"
+          dataPlano="mensal"
+          dataOrigem="cta-section"
         >
           Quero testar por R$ 14,99
           <ArrowRight size={18} />

@@ -19,7 +19,13 @@ const Waitlist = () => {
       <div className="flex-1 py-16 px-4 bg-gray-50">
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm text-center relative">
           <Link to="/" className="absolute top-4 left-4">
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button 
+              variant="outline" 
+              className="flex items-center gap-2"
+              dataServico="navegacao"
+              dataPlano="n/a"
+              dataOrigem="waitlist"
+            >
               <ArrowLeft size={18} />
               Voltar
             </Button>
@@ -58,6 +64,9 @@ const Waitlist = () => {
             <Button 
               onClick={handleWhatsAppChat}
               className="bg-green-500 hover:bg-green-600 text-white"
+              dataServico="consultoria-financeira"
+              dataPlano="teste"
+              dataOrigem="waitlist"
             >
               <MessageSquare size={20} />
               Solicitar período de teste
