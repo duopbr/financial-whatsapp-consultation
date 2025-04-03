@@ -19,7 +19,7 @@ export const CheckoutForm = () => {
     }
   });
   
-  const handleSubmit = form.handleSubmit((data) => {
+  const handleSubmit = form.handleSubmit(async (data) => {
     // Validate that phone number is provided
     if (!data.phone) {
       toast({
@@ -30,13 +30,36 @@ export const CheckoutForm = () => {
       return;
     }
     
-    // Simulate processing
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      setIsSubmitting(false);
-      navigate('/waitlist');
-    }, 1500);
+    try {
+      // Enviar dados para o Google Sheets
+      await fetch('https://script.google.com/macros/s/AKfycbzmuWKrH1PiRPhMFWwFzeRmg14ZvE1GGRfIbK-Vfc8XBVRAOYEf5HUpq5MCc-ffnfdTZg/exec', {
+        method: 'POST',
+        body: JSON.stringify({
+          telefone: data.phone,
+          metodoPagamento: data.paymentMethod,
+          valor: "14.99" // Valor fixo mencionado no formulário
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      // Continua com o fluxo normal
+      setTimeout(() => {
+        setIsSubmitting(false);
+        navigate('/waitlist');
+      }, 1500);
+  
+    } catch (error) {
+      console.error('Erro ao salvar dados:', error);
+      // O erro do Google Sheets não deve impedir o checkout
+      setTimeout(() => {
+        setIsSubmitting(false);
+        navigate('/waitlist');
+      }, 1500);
+    }
   });
   
   // Get the current payment method to use for the data-pagamento attribute
