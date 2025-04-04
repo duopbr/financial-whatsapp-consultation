@@ -78,7 +78,7 @@ export const CheckoutForm = () => {
       </h2>
       
       <p className="mb-6 text-center text-gray-600">
-        Assine nossa consultoria financeira por apenas R$ 14,99/mês
+        Assine nossa consultoria financeira por apenas R$ 24,99/mês
       </p>
       
       <Form {...form}>
