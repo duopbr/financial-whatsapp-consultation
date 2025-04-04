@@ -54,12 +54,16 @@ export const CheckoutForm = () => {
   
     } catch (error) {
       console.error('Erro ao salvar dados:', error);
-      // O erro do Google Sheets não deve impedir o checkout
+      toast({
+        title: "Erro ao salvar",
+        description: "Houve um problema ao enviar seus dados. Tente novamente mais tarde.",
+        variant: "destructive"
+    });
       setTimeout(() => {
-        setIsSubmitting(false);
-        navigate('/waitlist');
-      }, 1500);
-    }
+      setIsSubmitting(false);
+      navigate('/waitlist');
+  }, 1500);
+}
   });
   
   // Get the current payment method to use for the data-pagamento attribute
@@ -134,10 +138,10 @@ export const CheckoutForm = () => {
             <label htmlFor="phone">Número de WhatsApp</label>
             <input
               type="tel"
-              id="phone"
               className="card-input"
               placeholder="(00) 00000-0000"
-              {...form.register("phone")}
+              autoComplete="tel"
+              {...form.register("phone", { required: true })}
             />
             <p className="text-xs text-gray-500 mt-1">
               Você receberá o link de acesso neste número
