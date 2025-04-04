@@ -39,7 +39,7 @@ export const CheckoutForm = () => {
         body: JSON.stringify({
           telefone: data.phone,
           metodoPagamento: data.paymentMethod,
-          valor: "14.99" // Valor fixo mencionado no formulário
+          valor: "24.99" // Valor fixo mencionado no formulário
         }),
         headers: {
           'Content-Type': 'application/json'
