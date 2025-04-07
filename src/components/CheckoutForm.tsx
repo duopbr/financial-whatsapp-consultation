@@ -34,7 +34,7 @@ export const CheckoutForm = () => {
     
     try {
       // Enviar dados para o Google Sheets
-      await fetch('https://script.google.com/macros/s/AKfycbz9ufY-A23bGZGrQdkZgsJSW7V8WjYMw2lihe5q2HJdcFg02rN9YvI4tOq9ZqUWc6J6Mw/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzmuWKrH1PiRPhMFWwFzeRmg14ZvE1GGRfIbK-Vfc8XBVRAOYEf5HUpq5MCc-ffnfdTZg/exec', {
         method: 'POST',
         body: JSON.stringify({
           telefone: data.phone,
