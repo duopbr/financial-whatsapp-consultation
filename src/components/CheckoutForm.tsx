@@ -40,7 +40,8 @@ export const CheckoutForm = () => {
         }),
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        mode: 'no-cors'
       });
 
       setTimeout(() => {
