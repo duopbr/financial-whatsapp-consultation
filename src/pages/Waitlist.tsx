@@ -8,7 +8,7 @@ import { ArrowLeft, MessageSquare } from 'lucide-react';
 
 const Waitlist = () => {
   const handleWhatsAppChat = () => {
-    const phoneNumber = "5521973973673";
+    const phoneNumber = "5521967135336";
     const message = encodeURIComponent("Olá! Gostaria de solicitar um período de teste para o produto Duop.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
