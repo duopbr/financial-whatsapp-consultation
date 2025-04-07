@@ -29,7 +29,7 @@ export const CTASection = () => {
           dataPosicao="cta-section"
           dataPagina="home"
         >
-          Quero testar por R$ 14,99
+          Quero testar por R$ 24,99
           <ArrowRight size={18} />
         </Button>
         

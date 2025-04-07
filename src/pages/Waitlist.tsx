@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Button } from "@/components/ui/button";
@@ -8,8 +7,8 @@ import { ArrowLeft, MessageSquare } from 'lucide-react';
 
 const Waitlist = () => {
   const handleWhatsAppChat = () => {
-    const phoneNumber = "5521973973673";
-    const message = encodeURIComponent("Olá! Gostaria de solicitar um período de teste para o produto Duop.");
+    const phoneNumber = "5521967135336";
+    const message = encodeURIComponent("Olá! Eu deveria compra bolsa?.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
