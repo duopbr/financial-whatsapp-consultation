@@ -19,7 +19,7 @@ export const CTASection = () => {
         </h2>
         
         <p className="text-lg mb-8 text-gray-300">
-          Por apenas R$ 14,99 por mês, tenha acesso a consultores financeiros, análises e alertas direto no seu WhatsApp.
+          Por apenas R$ 34,99 por mês, tenha acesso a consultores financeiros, análises e alertas direto no seu WhatsApp.
         </p>
         
         <Button 
@@ -29,7 +29,7 @@ export const CTASection = () => {
           dataPosicao="cta-section"
           dataPagina="home"
         >
-          Quero testar por R$ 24,99
+          Quero testar por R$ 34,99
           <ArrowRight size={18} />
         </Button>
         
