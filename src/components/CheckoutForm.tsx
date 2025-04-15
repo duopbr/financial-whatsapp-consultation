@@ -36,7 +36,7 @@ export const CheckoutForm = () => {
         body: JSON.stringify({
           telefone: data.phone,
           metodoPagamento: data.paymentMethod,
-          valor: "24.99"
+          valor: "34.99"
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ export const CheckoutForm = () => {
       </h2>
 
       <p className="mb-6 text-center text-gray-600">
-        Assine nossa consultoria financeira por apenas R$ 24,99/mês
+        Assine nossa consultoria financeira por apenas R$ 34,99/mês
       </p>
 
       <Form {...form}>
