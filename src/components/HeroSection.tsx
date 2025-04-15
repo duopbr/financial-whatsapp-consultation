@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="order-2 md:order-1">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-finance-navy leading-tight">
-            Sua Consultoria Financeira no WhatsApp – Inteligente, Personalizada e por <span className="text-finance-green">R$ 24,99/mês</span>
+            Sua Consultoria Financeira no WhatsApp – Inteligente, Personalizada e por <span className="text-finance-green">R$ 34,99/mês</span>
           </h1>
           
           <p className="mt-4 text-lg text-gray-600 mb-8">
@@ -27,11 +27,11 @@ export const HeroSection = () => {
           <Button 
             onClick={handleCTAClick}
             className="bg-finance-green hover:bg-green-600 text-white font-medium px-6 py-3 text-lg rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
-            dataBotao="queroassinarporr$14,99"
+            dataBotao="queroassinarporr$34,99"
             dataPosicao="hero-section"
             dataPagina="home"
           >
-            Quero Assinar por R$ 24,99
+            Quero Assinar por R$ 34,99
             <ArrowRight size={18} />
           </Button>
           
