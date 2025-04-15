@@ -5,7 +5,7 @@ import { CreditCard, Smartphone, MessageCircle } from 'lucide-react';
 const STEPS = [
   {
     icon: <CreditCard size={24} />,
-    title: "Assine por R$ 24,99",
+    title: "Assine por R$ 34,99",
     description: "Faça sua assinatura com cartão de crédito de forma segura."
   },
   {
