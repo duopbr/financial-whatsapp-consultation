@@ -14,7 +14,6 @@ export const Footer = () => {
           
           <div className="text-sm text-gray-500">
             <p>© 2023 Duop. Todos os direitos reservados.</p>
-            <p className="mt-1">Este é um serviço fictício para fins de teste. Nenhum valor será cobrado.</p>
           </div>
         </div>
       </div>
