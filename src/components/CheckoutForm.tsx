@@ -162,10 +162,6 @@ export const CheckoutForm = () => {
               "Assinar Agora"
             )}
           </Button>
-
-          <p className="mt-4 text-xs text-center text-gray-500">
-            Você não será cobrado. Este é um produto fictício para fins de teste.
-          </p>
         </form>
       </Form>
     </div>
