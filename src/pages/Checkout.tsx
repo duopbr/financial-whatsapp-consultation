@@ -36,7 +36,6 @@ const Checkout = () => {
           <CheckoutForm />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
