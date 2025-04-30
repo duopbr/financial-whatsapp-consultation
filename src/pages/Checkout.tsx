@@ -24,7 +24,7 @@ const Checkout = () => {
           </Button>
         </Link>
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8 text-center">
+          <div className="mb-8 text-center mt-16">
             <h1 className="text-3xl font-bold text-finance-navy">
               Complete sua assinatura
             </h1>
