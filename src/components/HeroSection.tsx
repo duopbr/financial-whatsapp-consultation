@@ -17,7 +17,8 @@ export const HeroSection = () => {
   return (
     <section className="py-12 sm:py-16 px-4">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <div className="order-1 md:order-1">
+        {/* Text content - force this to be first on mobile with flex order */}
+        <div className="flex-1 md:order-1">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-finance-navy leading-tight">
             Sua Consultoria Financeira no WhatsApp – Inteligente, Personalizada e por <span className="text-finance-green">R$ 34,99/mês</span>
           </h1>
@@ -49,7 +50,8 @@ export const HeroSection = () => {
           </div>
         </div>
         
-        <div className="order-2 md:order-2">
+        {/* Chat content - force this to be second on mobile with flex order */}
+        <div className="flex-1 md:order-2">
           <div className="flex justify-center">
             <WhatsAppChat />
           </div>
