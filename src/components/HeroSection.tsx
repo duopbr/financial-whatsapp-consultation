@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { WhatsAppChat } from './WhatsAppChat';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export const HeroSection = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const handleCTAClick = () => {
     navigate('/checkout');
@@ -15,7 +17,7 @@ export const HeroSection = () => {
   return (
     <section className="py-12 sm:py-16 px-4">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <div className="order-2 md:order-1">
+        <div className={`${isMobile ? 'order-1' : 'order-1 md:order-1'}`}>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-finance-navy leading-tight">
             Sua Consultoria Financeira no WhatsApp – Inteligente, Personalizada e por <span className="text-finance-green">R$ 34,99/mês</span>
           </h1>
@@ -47,8 +49,10 @@ export const HeroSection = () => {
           </div>
         </div>
         
-        <div className="order-1 md:order-2 flex justify-center">
-          <WhatsAppChat />
+        <div className={`${isMobile ? 'order-2' : 'order-2 md:order-2'}`}>
+          <div className="flex justify-center">
+            <WhatsAppChat />
+          </div>
         </div>
       </div>
     </section>
