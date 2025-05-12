@@ -1,11 +1,11 @@
 
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import { CheckoutForm } from '@/components/CheckoutForm';
 import { Footer } from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { PricingCards } from '@/components/PricingCards';
 
 const Checkout = () => {
   return (
@@ -29,13 +29,14 @@ const Checkout = () => {
               Complete sua assinatura
             </h1>
             <p className="text-gray-600 mt-2">
-              Informe seu WhatsApp e escolha como deseja pagar sua consultoria financeira
+              Escolha o plano ideal para você e a forma de pagamento que preferir
             </p>
           </div>
           
-          <CheckoutForm />
+          <PricingCards />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
